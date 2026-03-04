@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bảng 1</title>
+</head>
+<body>
+
+<table border="1" cellspacing="0" cellpadding="6" width="100%">
+    <thead>
+    <tr>
+        <th rowspan="4">Nhánh SP</th>
+        <th rowspan="4">Epic</th>
+        <th colspan="7">Năm 2025</th>
+        <th rowspan="4">SLA/SLO</th>
+        <th rowspan="4">Ghi chú</th>
+    </tr>
+    <tr>
+        <th colspan="4">H1</th>
+        <th colspan="3">H2</th>
+    </tr>
+    <tr>
+        <th>T.01</th>
+        <th colspan="2">T.02</th>
+        <th>T.03</th>
+        <th>T.07</th>
+        <th colspan="2">T.08</th>
+        <th>T.09</th>
+    </tr>
+    <tr>
+        <th>S<sub>1</sub></th>
+        <th>S<sub>2</sub></th>
+        <th>S<sub>3</sub></th>
+        <th>S<sub>4</sub></th>
+        <th>S<sub>1</sub></th>
+        <th>S<sub>2</sub></th>
+        <th>S<sub>3</sub></th>
+        <th>S<sub>4</sub></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td rowspan="3" align="center"><b>B2C</b></td>
+        <td align="center"><i><b>Checkout 2.0</b></i></td>
+        <td align="center"><b>20</b></td>
+        <td align="center">18</td>
+        <td align="center">—</td>
+        <td align="center">22</td>
+        <td align="center">—</td>
+        <td align="center" >30</td>
+        <td align="center">—</td>
+        <td align="center">15</td>
+        <td align="center"><b>99.9%</b></td>
+        <td>Target H2</td>
+    </tr>
+    <tr>
+        <td align="center"><i><b>Search Relevance</b></i></td>
+        <td align="center">10</td>
+        <td align="center">15</td>
+        <td align="center"><b>18</b></td>
+        <td align="center">—</td>
+        <td align="center">12</td>
+        <td align="center">12</td>
+        <td align="center">—</td>
+        <td align="center">14</td>
+        <td align="center">0.1<sup>%</sup> EB</td>
+        <td>AB test</td>
+    </tr>
+    <tr>
+        <td align="center"><b>Gộp B2C</b></td>
+        <td colspan="8"><i>Tổng H1+H2:</i> <b>ổn định</b></td>
+        <td align="center">—</td>
+        <td>OK</td>
+    </tr>
+
+    <tr>
+        <td rowspan="3" align="center"><b>B2B</b></td>
+        <td align="center"><b>API Gateway</b></td>
+        <td align="center">—</td>
+        <td align="center">14</td>
+        <td align="center">16</td>
+        <td align="center">—</td>
+        <td align="center">—</td>
+        <td align="center">18</td>
+        <td align="center">18</td>
+        <td align="center"><b>20</b></td>
+        <td align="center">99.5<sup>%</sup></td>
+        <td rowspan="2">Harden infra</td>
+    </tr>
+    <tr>
+        <td align="center"><b>Billing v1.3 - 5</b></td>
+        <td colspan="4" >Migrate v2</td>
+        <td align="center">—</td>
+        <td align="center">—</td>
+        <td align="center">10</td>
+        <td align="center">12</td>
+        <td align="center">99.0<sup>%</sup></td>
+    </tr>
+    <tr>
+        <td align="center"><b>Gộp B2B</b></td>
+        <td colspan="8"><i>Tổng H1+H2:</i> <b>tiến độ đạt</b></td>
+        <td align="center">—</td>
+        <td align="center">—</td>
+    </tr>
+
+    <tr>
+        <td rowspan="2" align="center"><b>Platform</b></td>
+        <td align="center"><b>Observability</b></td>
+        <td colspan="4"><b>Agent & Dash</b></td>
+        <td align="center">—</td>
+        <td align="center">—</td>
+        <td align="center">—</td>
+        <td align="center">—</td>
+        <td align="center"><b>99.95%</b></td>
+        <td>Rollout T.09</td>
+    </tr>
+    <tr>
+        <td align="center"><b>Security</b></td>
+        <td>Audit</td>
+        <td align="center">—</td>
+        <td align="center">—</td>
+        <td>Hardening</td>
+        <td><i>IAM</i></td>
+        <td align="center">—</td>
+        <td align="center">—</td>
+        <td align="center">—</td>
+        <td align="center">99.9<sup>%</sup></td>
+        <td>Chốt H2</td>
+    </tr>
+    </tbody>
+    <tfoot>
+    <tr>
+        <th colspan="2">Tổng quan</th>
+        <th colspan="8"></th>
+        <th align="center">OK</th>
+        <th align="center">—</th>
+    </tr>
+    </tfoot>
+</table>
+
+</body>
+</html>
