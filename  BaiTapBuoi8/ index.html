@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Profile Customizer</title>
+</head>
+
+    <style>
+
+        /* ================= RESET ================= */
+        *{
+            box-sizing: border-box;
+        }
+
+        body{
+            margin:0;
+            background:#eee;
+            font-size:16px;
+            min-height:100vh;
+        }
+
+        /* ================= LAYOUT ================= */
+        .container{
+            width:90vw;
+            margin:auto;
+        }
+
+        .control-panel{
+            width:30%;
+            display:inline-block;
+            vertical-align:top;
+            background:#f5f5f5;
+            padding:10px;
+        }
+
+        .preview{
+            width:calc(70% - 10px);
+            display:inline-block;
+            vertical-align:top;
+            padding:10px;
+            min-height:calc(100vh - 20px);
+        }
+
+        /* ================= PANEL ================= */
+        .group{
+            margin-bottom:10px;
+        }
+
+        .group p{
+            font-weight:bold;
+        }
+
+        label{
+            display:block;
+            background:#ddd;
+            padding:0.5em;
+            margin-bottom:5px;
+            cursor:pointer;
+        }
+
+        /* ================= PROFILE ================= */
+        .profile-card{
+            background:white;
+            padding:20px;
+            text-align:left;
+        }
+
+        .profile-name{
+            font-size:2.2rem;
+            line-height:1.2;
+            font-weight:bold;
+            color:black;
+        }
+
+        .profile-job{
+            font-size:1.1rem;
+            line-height:1.5;
+            letter-spacing:0.02em;
+        }
+
+        .profile-desc{
+            font-size:1rem;
+            line-height:1.7;
+        }
+
+        .skill-tag{
+            display:inline-block;
+            background:#f0f0f0;
+            margin-right:5px;
+            margin-bottom:5px;
+            padding:0.3em;
+            font-size:0.85rem;
+        }
+
+        .btn{
+            display:inline-block;
+            padding:0.5em 1em;
+            background:#1a1a1a;
+            color:white;
+            text-decoration:none;
+            font-size:0.9rem;
+        }
+
+
+        /* BACKGROUND */
+        #bg-gray:checked ~ .preview .profile-card{background:lightgray;}
+        #bg-yellow:checked ~ .preview .profile-card{background:lightyellow;}
+        #bg-blue:checked ~ .preview .profile-card{background:lightblue;}
+        #bg-pink:checked ~ .preview .profile-card{background:pink;}
+
+        /* NAME SIZE */
+        #name-small:checked ~ .preview .profile-name{font-size:2rem;}
+        #name-medium:checked ~ .preview .profile-name{font-size:2.2rem;}
+        #name-large:checked ~ .preview .profile-name{font-size:2.75rem;}
+
+        /* NAME STYLE */
+        #name-upper:checked ~ .preview .profile-name{text-transform:uppercase;}
+
+        /* NAME COLOR */
+        #name-blue:checked ~ .preview .profile-name{color:blue;}
+        #name-green:checked ~ .preview .profile-name{color:green;}
+        #name-red:checked ~ .preview .profile-name{color:red;}
+
+        /* ALIGN */
+        #align-center:checked ~ .preview .profile-card{text-align:center;}
+        #align-right:checked ~ .preview .profile-card{text-align:right;}
+
+        /* JOB SIZE */
+        #job-small:checked ~ .preview .profile-job{font-size:0.9rem;}
+        #job-medium:checked ~ .preview .profile-job{font-size:1.1rem;}
+        #job-large:checked ~ .preview .profile-job{font-size:1.3rem;}
+
+        /* LETTER SPACING */
+        #ls-tight:checked ~ .preview .profile-job{letter-spacing:-0.03em;}
+        #ls-normal:checked ~ .preview .profile-job{letter-spacing:0.02em;}
+        #ls-wide:checked ~ .preview .profile-job{letter-spacing:0.18em;}
+
+        /* DESC SIZE */
+        #desc-small:checked ~ .preview .profile-desc{font-size:0.9rem;}
+        #desc-medium:checked ~ .preview .profile-desc{font-size:1rem;}
+        #desc-large:checked ~ .preview .profile-desc{font-size:1.125rem;}
+
+        /* LINE HEIGHT */
+        #line-tight:checked ~ .preview .profile-desc{line-height:1.6;}
+        #line-normal:checked ~ .preview .profile-desc{line-height:1.7;}
+        #line-loose:checked ~ .preview .profile-desc{line-height:2;}
+
+        /* BUTTON */
+        #btn-blue:checked ~ .preview .btn{background:blue;}
+        #btn-light:checked ~ .preview .btn{
+            background:#f5f5f5;
+            color:black;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- ================= INPUT ================= -->
+    <input type="radio" name="bg" id="bg-default" checked>
+    <input type="radio" name="bg" id="bg-gray">
+    <input type="radio" name="bg" id="bg-yellow">
+    <input type="radio" name="bg" id="bg-blue">
+    <input type="radio" name="bg" id="bg-pink">
+
+    <input type="radio" name="name-size" id="name-small">
+    <input type="radio" name="name-size" id="name-medium" checked>
+    <input type="radio" name="name-size" id="name-large">
+
+    <input type="radio" name="name-style" id="name-normal" checked>
+    <input type="radio" name="name-style" id="name-upper">
+
+    <input type="radio" name="name-color" id="name-black" checked>
+    <input type="radio" name="name-color" id="name-blue">
+    <input type="radio" name="name-color" id="name-green">
+    <input type="radio" name="name-color" id="name-red">
+
+    <input type="radio" name="align" id="align-left" checked>
+    <input type="radio" name="align" id="align-center">
+    <input type="radio" name="align" id="align-right">
+
+    <input type="radio" name="job-size" id="job-small">
+    <input type="radio" name="job-size" id="job-medium" checked>
+    <input type="radio" name="job-size" id="job-large">
+
+    <input type="radio" name="ls" id="ls-tight">
+    <input type="radio" name="ls" id="ls-normal" checked>
+    <input type="radio" name="ls" id="ls-wide">
+
+    <input type="radio" name="desc-size" id="desc-small">
+    <input type="radio" name="desc-size" id="desc-medium" checked>
+    <input type="radio" name="desc-size" id="desc-large">
+
+    <input type="radio" name="line" id="line-tight">
+    <input type="radio" name="line" id="line-normal" checked>
+    <input type="radio" name="line" id="line-loose">
+
+    <input type="radio" name="btn" id="btn-dark" checked>
+    <input type="radio" name="btn" id="btn-blue">
+    <input type="radio" name="btn" id="btn-light">
+
+    <!-- ================= CONTROL ================= -->
+    <div class="control-panel">
+
+        <div class="group">
+            <p>Background</p>
+            <label for="bg-default">White</label>
+            <label for="bg-gray">Gray</label>
+            <label for="bg-yellow">Yellow</label>
+            <label for="bg-blue">Blue</label>
+            <label for="bg-pink">Pink</label>
+        </div>
+
+        <div class="group">
+            <p>Name Size</p>
+            <label for="name-small">Small</label>
+            <label for="name-medium">Medium</label>
+            <label for="name-large">Large</label>
+        </div>
+
+        <div class="group">
+            <p>Name Style</p>
+            <label for="name-normal">Normal</label>
+            <label for="name-upper">Uppercase</label>
+        </div>
+
+        <div class="group">
+            <p>Name Color</p>
+            <label for="name-black">Black</label>
+            <label for="name-blue">Blue</label>
+            <label for="name-green">Green</label>
+            <label for="name-red">Red</label>
+        </div>
+
+        <div class="group">
+            <p>Align</p>
+            <label for="align-left">Left</label>
+            <label for="align-center">Center</label>
+            <label for="align-right">Right</label>
+        </div>
+
+        <div class="group">
+            <p>Job Size</p>
+            <label for="job-small">Small</label>
+            <label for="job-medium">Medium</label>
+            <label for="job-large">Large</label>
+        </div>
+
+        <div class="group">
+            <p>Letter Spacing</p>
+            <label for="ls-tight">Tight</label>
+            <label for="ls-normal">Normal</label>
+            <label for="ls-wide">Wide</label>
+        </div>
+
+        <div class="group">
+            <p>Description Size</p>
+            <label for="desc-small">Small</label>
+            <label for="desc-medium">Medium</label>
+            <label for="desc-large">Large</label>
+        </div>
+
+        <div class="group">
+            <p>Line Height</p>
+            <label for="line-tight">Tight</label>
+            <label for="line-normal">Normal</label>
+            <label for="line-loose">Loose</label>
+        </div>
+
+        <div class="group">
+            <p>Button Color</p>
+            <label for="btn-dark">Dark</label>
+            <label for="btn-blue">Blue</label>
+            <label for="btn-light">Light</label>
+        </div>
+
+    </div>
+
+    <!-- ================= PREVIEW ================= -->
+    <div class="preview">
+
+        <div class="profile-card">
+
+            <div class="profile-name">Dương Tùng </div>
+
+            <div class="profile-job">Frontend Developer</div>
+
+            <p class="profile-desc">
+                Tôi là sinh viên và tôi đang học ở f8, Tôi yêu thích lập trìn. Tôi thích học hỏi những công nghệ mới.
+            </p>
+
+            <div>
+                <span class="skill-tag">HTML</span>
+                <span class="skill-tag">CSS</span>
+                <span class="skill-tag">JavaScript</span>
+            </div>
+
+            <br>
+
+            <div>
+                <span class="skill-tag">Music</span>
+                <span class="skill-tag">Travel</span>
+            </div>
+
+            <br>
+
+            <a class="btn">liên hệ với tôi</a>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
