@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+    <style>
+        .box {
+            display: inline-block;
+            margin: 20px;
+        }
+
+        /* 1. Hình vuông */
+        .hinh-1 {
+            width: 100px;
+            height: 100px;
+            border-width: 2px;
+            border-style: solid;
+            border-color: #e74c3c;
+        }
+
+        /* 2. Hình chữ nhật */
+        .hinh-2 {
+            width: 150px;
+            height: 80px;
+            border-width: 2px;
+            border-style: solid;
+            border-color: #3498db;
+        }
+
+        /* 3. Tam giác lên */
+        .hinh-3 {
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 50px 80px 50px;
+            border-color: transparent transparent #2ecc71 transparent;
+        }
+
+        /* 4. Tam giác xuống */
+        .hinh-4 {
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 80px 50px 0 50px;
+            border-color: #f1c40f transparent transparent transparent;
+        }
+
+        /* 5. Tam giác trái */
+        .hinh-5 {
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 50px 80px 50px 0;
+            border-color: transparent #9b59b6 transparent transparent;
+        }
+
+        /* 6. Tam giác phải */
+        .hinh-6 {
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 50px 0 50px 80px;
+            border-color: transparent transparent transparent #e67e22;
+        }
+
+        /* 7. Hình thang */
+        .hinh-7 {
+            width: 100px;
+            height: 0;
+            border-style: solid;
+            border-width: 0 30px 80px 30px;
+            border-color: transparent transparent #1abc9c transparent;
+        }
+
+        /* 8. Tam giác rộng */
+        .hinh-8 {
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 80px 50px 80px;
+            border-color: transparent transparent #34495e transparent;
+        }
+
+        /* 9. Tam giác nhọn */
+        .hinh-9 {
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 20px 120px 20px;
+            border-color: transparent transparent #c0392b transparent;
+        }
+
+        /* 10. Tam giác cân */
+        .hinh-10 {
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 40px 60px 40px;
+            border-color: transparent transparent #d35400 transparent;
+        }
+
+        /* 11. Mũi tên phải */
+        .hinh-11 {
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 30px 0 30px 50px;
+            border-color: transparent transparent transparent #1abc9c;
+        }
+
+        /* 12. Mũi tên trái */
+        .hinh-12 {
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 30px 50px 30px 0;
+            border-color: transparent #8e44ad transparent transparent;
+        }
+
+        /* 13. Ribbon */
+        .hinh-13 {
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 40px 40px 40px 100px;
+            border-color: #e67e22 transparent #e67e22 #e67e22;
+        }
+
+        /* 14. F8 */
+        .f-container, .n8-container {
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .f-vertical {
+            width: 20px;
+            height: 120px;
+            border-left: 20px solid #e67e22;
+        }
+
+        .f-horizontal-1 {
+            width: 60px;
+            height: 0;
+            border-top: 20px solid #e67e22;
+            margin-top: -120px; margin-left: 20px;
+        }
+
+        .f-horizontal-2 {
+            width: 40px;
+            height: 0;
+            border-top: 20px solid #e67e22;
+            margin-top: 20px;
+            margin-left: 20px;
+        }
+
+        .n8-top {
+            width: 40px;
+            height: 30px;
+            border: 20px solid #e67e22;
+            margin-left: 30px;
+        }
+
+        .n8-bottom {
+            width: 40px;
+            height: 30px;
+            border: 20px solid #e67e22;
+            border-top: 0;
+            margin-left: 30px;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="box"><div class="hinh-1"></div><div>1. Hình vuông</div></div>
+<div class="box"><div class="hinh-2"></div><div>2. Hình chữ nhật</div></div>
+<div class="box"><div class="hinh-3"></div><div>3. Tam giác lên</div></div>
+<div class="box"><div class="hinh-4"></div><div>4. Tam giác xuống</div></div>
+<div class="box"><div class="hinh-5"></div><div>5. Tam giác trái</div></div>
+<div class="box"><div class="hinh-6"></div><div>6. Tam giác phải</div></div>
+<div class="box"><div class="hinh-7"></div><div>7. Hình thang</div></div>
+
+<div style="display: block;"></div> <div class="box"><div class="hinh-8"></div><div>8. Tam giác rộng</div></div>
+<div class="box"><div class="hinh-9"></div><div>9. Tam giác nhọn</div></div>
+<div class="box"><div class="hinh-10"></div><div>10. Tam giác cân</div></div>
+<div class="box"><div class="hinh-11"></div><div>11. Mũi tên phải</div></div>
+<div class="box"><div class="hinh-12"></div><div>12. Mũi tên trái</div></div>
+<div class="box"><div class="hinh-13"></div><div>13. Ribbon/Lá cờ</div></div>
+
+<div style="margin-top: 50px;">
+    <div class="f-container">
+        <div class="f-vertical"></div>
+        <div class="f-horizontal-1"></div>
+        <div class="f-horizontal-2"></div>
+    </div>
+    <div class="n8-container">
+        <div class="n8-top"></div>
+        <div class="n8-bottom"></div>
+    </div>
+    <p>14. F8</p>
+</div>
+
+</body>
+</html>
