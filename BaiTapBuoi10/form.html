@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form tư vấn</title>
+</head>
+
+    <link rel="stylesheet" href="form.css">
+
+</head>
+<body>
+
+<!-- Nút mở modal -->
+<input type="checkbox" id="modal-toggle">
+
+<label for="modal-toggle" class="open-btn">
+    Tư vấn ngay
+</label>
+
+<!-- Overlay -->
+<label for="modal-toggle" class="overlay">
+
+    <!-- Modal -->
+    <div class="modal">
+
+        <!-- Nút đóng -->
+        <label for="modal-toggle" class="close-btn">X</label>
+
+        <h2>Đăng ký tư vấn</h2>
+
+        <form action="https://api-gateway.fullstack.edu.vn/action_page.php">
+
+            <!-- Họ tên -->
+            <div class="form-group">
+                <label>Họ và tên <span class="required">*</span></label>
+
+                <div class="input-wrap">
+                    <input type="text" placeholder="Nguyễn Văn A" required>
+
+                    <div class="tooltip">
+                        Nhập họ và tên đầy đủ của bạn
+                    </div>
+                </div>
+            </div>
+
+            <!-- SĐT -->
+            <div class="form-group">
+                <label>Số điện thoại <span class="required">*</span></label>
+
+                <div class="input-wrap">
+                    <input type="tel" placeholder="0912345678" required>
+
+                    <div class="tooltip">
+                        Số điện thoại để chúng tôi liên hệ tư vấn
+                    </div>
+                </div>
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+                <label>Email</label>
+
+                <div class="input-wrap">
+                    <input type="email" placeholder="example@gmail.com">
+
+                    <div class="tooltip">
+                        Email nhận thông tin khóa học (không bắt buộc)
+                    </div>
+                </div>
+            </div>
+
+            <!-- Checkbox -->
+            <div class="form-group">
+                <label>Khóa học quan tâm <span class="required">*</span></label>
+
+                <div class="checkbox-wrap">
+
+                    <label class="checkbox-item">
+                        <input type="checkbox">
+                        HTML & CSS
+
+                        <span class="tooltip">
+                            Khóa nền tảng xây dựng giao diện web
+                        </span>
+                    </label>
+
+                    <label class="checkbox-item">
+                        <input type="checkbox">
+                        JavaScript
+
+                        <span class="tooltip">
+                            Ngôn ngữ lập trình cho web động
+                        </span>
+                    </label>
+
+                    <label class="checkbox-item">
+                        <input type="checkbox">
+                        Front-end lộ trình
+
+                        <span class="tooltip">
+                            Lộ trình hoàn chỉnh trở thành Front-end Developer
+                        </span>
+                    </label>
+
+                    <label class="checkbox-item">
+                        <input type="checkbox">
+                        ReactJS
+
+                        <span class="tooltip">
+                            Thư viện JavaScript phổ biến nhất hiện nay
+                        </span>
+                    </label>
+
+                    <label class="checkbox-item">
+                        <input type="checkbox">
+                        Chưa rõ – cần tư vấn
+
+                        <span class="tooltip">
+                            Chúng tôi sẽ tư vấn lộ trình phù hợp với bạn
+                        </span>
+                    </label>
+
+                </div>
+            </div>
+
+            <!-- Submit -->
+            <button type="submit" class="submit-btn">
+                ĐĂNG KÝ TƯ VẤN NGAY
+            </button>
+
+        </form>
+
+    </div>
+
+</label>
+
+</body>
+</html>

@@ -1,0 +1,120 @@
+/* Reset cơ bản */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 16px;
+}
+
+/* Header */
+.header {
+    background: #ffffff;
+    border-bottom: 0.0625rem solid #dddddd;
+}
+
+/* Container */
+.container {
+    width: 75rem;
+    margin: 0 auto;
+    padding: 0.5rem 0;
+}
+
+/* Logo */
+.logo {
+    width: 2.375rem;
+    vertical-align: middle;
+}
+
+/* Menu */
+.nav {
+    display: inline-block;
+    margin-left: 1.5625rem;
+    vertical-align: middle;
+}
+
+.menu {
+    list-style: none;
+}
+
+/* Menu cấp 1 */
+.menu-item {
+    display: inline-block;
+    position: relative;
+    margin-right: 1.5625rem;
+}
+
+.menu-item a {
+    text-decoration: none;
+    color: #333333;
+    font-weight: bold;
+    padding: 0.375rem 0;
+    display: inline-block;
+}
+
+/* Hover cấp 1 */
+.menu-item:hover > a {
+    color: #d62828;
+    border-bottom: 0.125rem solid #d62828;
+}
+
+/* Dropdown cấp 1 */
+.submenu {
+    display: none;
+    position: absolute;
+    background: #ffffff;
+    border: 0.0625rem solid #dddddd;
+    min-width: 12.5rem;
+}
+
+.menu-item:hover > .submenu {
+    display: block;
+}
+
+/* Item dropdown */
+.submenu li {
+    position: relative;
+}
+
+.submenu a {
+    display: block;
+    padding: 0.375rem 0.625rem;
+    color: #333333;
+    font-weight: normal;
+}
+
+/* Hover dropdown */
+.submenu a:hover {
+    background: #f5f5f5;
+    color: #d62828;
+}
+
+/* Dropdown cấp 2 */
+.submenu-2 {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background: #ffffff;
+    border: 0.0625rem solid #dddddd;
+    min-width: 12.5rem;
+}
+
+.has-sub:hover > .submenu-2 {
+    display: block;
+}
+
+/* Icon */
+.arrow-down {
+    font-size: 0.625rem;
+    color: #555555;
+    margin-left: 0.3125rem;
+}
+
+.arrow-right {
+    font-size: 0.625rem;
+    color: #777777;
+    float: right;
+}

@@ -1,0 +1,159 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 16px;
+}
+
+/* Background */
+body {
+    background: linear-gradient(135deg, #a855f7, #c084fc);
+    text-align: center;
+    padding-top: 10rem;
+}
+
+/* Nút mở */
+.open-btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: #f05123;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+/* Hover nút */
+.open-btn:hover {
+    background: #d8431c;
+}
+
+/* Ẩn checkbox */
+#modal-toggle {
+    display: none;
+}
+
+/* Overlay */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+}
+
+/* Modal */
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 25rem;
+    margin-left: -12.5rem;
+    margin-top: -15rem;
+    background: #ffffff;
+    padding: 2rem;
+    text-align: left;
+}
+
+/* Close */
+.close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+}
+
+/* Hiện modal */
+#modal-toggle:checked ~ .overlay {
+    display: block;
+}
+
+/* Form */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.required {
+    color: #ef4444;
+}
+
+/* Input */
+input {
+    width: 100%;
+    padding: 0.5rem;
+    background: #f8fafc;
+    border: 0.0625rem solid #e2e8f0;
+}
+
+/* Tooltip wrapper */
+.input-wrap {
+    position: relative;
+}
+
+/* Tooltip */
+.tooltip {
+    position: absolute;
+    top: -2.5rem;
+    left: 0;
+    background: #1e293b;
+    color: #ffffff;
+    padding: 0.5rem;
+    font-size: 0.75rem;
+
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Mũi tên tooltip */
+.tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0.5rem;
+    border: 0.5rem solid transparent;
+    border-top-color: #1e293b;
+}
+
+/* Hover input hiện tooltip */
+.input-wrap:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Checkbox */
+.checkbox-item {
+    display: block;
+    margin-bottom: 0.5rem;
+    position: relative;
+}
+
+/* Tooltip checkbox */
+.checkbox-item .tooltip {
+    position: absolute;
+    top: -2.5rem;
+    left: 0;
+}
+
+/* Hover checkbox hiện tooltip */
+.checkbox-item:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Button submit */
+.submit-btn {
+    width: 100%;
+    padding: 0.75rem;
+    background: #a855f7;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background: #9333ea;
+}
