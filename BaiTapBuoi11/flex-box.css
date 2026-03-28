@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Container chung */
+.container {
+    width: 600px;
+    height: 200px;
+    border: 2px solid red;
+    margin: 20px auto;
+    display: flex;
+}
+
+/* Box chung */
+.box {
+    width: 60px;
+    height: 60px;
+    background: #5b7aa3;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ========== Container 1 ========== */
+.c1 {
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ========== Container 2 ========== */
+.c2 {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ========== Container 3 ========== */
+.c3 {
+    flex-direction: column;
+    align-items: center;
+}
+
+.c3 .box:nth-child(2) {
+    margin-top: 20px;
+}
+
+.c3 .box:nth-child(3) {
+    margin-top: 50px;
+}
+
+/* ========== Container 4 ========== */
+.c4 {
+    justify-content: center;
+    align-items: center;
+}
+
+.c4 .box:nth-child(2) {
+    margin-left: 10px;
+}
+
+.c4 .box:nth-child(3) {
+    margin-left: 40px;
+}
+
+/* ========== Container 5 ========== */
+.c5 {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ========== Container 6 ========== */
+.c6 {
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/* ========== Container 7 ========== */
+.c7 {
+    flex-direction: column;
+    align-items: center;
+}
+
+.c7 .box:nth-child(2) {
+    margin-top: 60px;
+}
+
+.c7 .box:nth-child(3) {
+    margin-top: 20px;
+}
+
+/* ========== Container 8 ========== */
+.c8 {
+    align-items: center;
+}
+
+.c8 .box:nth-child(2) {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ========== Container 9 ========== */
+.c9 {
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.c9 .box:nth-child(1) {
+    margin-top: -30px;
+}
+
+.c9 .box:nth-child(3) {
+    margin-top: 30px;
+}
+
+/* ========== Container 10 ========== */
+.c10 {
+    align-items: flex-start;
+}
+
+.c10 .box2 {
+    margin: auto;
+}
+
+.c10 .box:last-child {
+    margin-left: auto;
+    margin-top: auto;
+}
