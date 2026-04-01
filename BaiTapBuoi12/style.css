@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #ebf5fe;
+    color: #666;
+}
+
+/* Layout */
+.container {
+    max-width: 1100px;
+    margin: 50px auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Card */
+.card {
+    flex: 1 1 calc(33.333% - 20px);
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    border: 3px solid #e0e0e0;
+    transition: 0.3s;
+}
+
+/* Icon */
+.icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 32px;
+}
+
+/* Title */
+.card h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    margin: 20px 0 15px;
+}
+
+/* Text */
+.card p {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Link */
+.card a {
+    color: #2196f3;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.card a:hover {
+    text-decoration: underline;
+}
+
+/* COLORS */
+.red .icon { background: #ff6b6b; }
+.green .icon { background: #4ecdc4; }
+.yellow .icon { background: #f9a825; }
+.blue .icon { background: #5e9cff; }
+.purple .icon { background: #9b59b6; }
+.lime .icon { background: #7cb342; }
+
+/* Hover border */
+.red:hover { border-color: #ff6b6b; }
+.green:hover { border-color: #4ecdc4; }
+.yellow:hover { border-color: #f9a825; }
+.blue:hover { border-color: #5e9cff; }
+.purple:hover { border-color: #9b59b6; }
+.lime:hover { border-color: #7cb342; }
