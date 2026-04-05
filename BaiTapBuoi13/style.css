@@ -1,0 +1,80 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.strip {
+    position: relative;
+    flex: 1; /* Chia đều 20% cho mỗi dải */
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+/* Màu nền mặc định */
+.relax { background-color: forestgreen; }
+.explore { background-color: khaki; }
+.travel { background-color: dodgerblue; }
+.achieve { background-color: orange; }
+.dare { background-color: violet; }
+
+.title {
+    position: relative;
+    z-index: 10;
+    color: white;
+    font-family: Helvetica, sans-serif;
+    font-weight: 900;
+    font-size: 2rem;
+}
+
+.strip img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    z-index: 5;
+    display: none;
+}
+
+/* Hiệu ứng Hover khớp với ảnh mẫu */
+.strip:hover {
+    flex: 5; /* Mở rộng strip được chọn, đẩy các strip khác thu nhỏ lại */
+}
+
+.strip:hover .title {
+    display: none; /* Ẩn chữ khi mở rộng */
+}
+
+.strip:hover img,
+.strip:hover .overlay {
+    display: block; /* Hiện hình ảnh và lớp phủ */
+}
