@@ -1,0 +1,221 @@
+/* 1. Reset & Base Typography */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%; /* 1rem = 10px */
+}
+
+body {
+    font-size: 1.6rem; /* 16px */
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    background-color: #e0e0e0;
+    color: #333;
+}
+
+/* 2. Header & Navigation */
+.header {
+    background-color: #333;
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 1001;
+}
+
+.header__logo {
+    font-size: 2.4rem;
+    font-weight: 900;
+    font-style: italic;
+    z-index: 1001;
+}
+
+.header__hamburger {
+    display: none; /* Ẩn trên desktop */
+    font-size: 2.8rem;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.nav__list {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav__link {
+    color: white;
+    text-decoration: none;
+    font-size: 1.6rem;
+}
+
+.nav__close-btn {
+    display: none;
+}
+
+/* 3. Overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 998;
+    opacity: 0;
+    visibility: hidden;
+    cursor: pointer;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* 4. Layout Container */
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+}
+
+.container__content {
+    flex: 1;
+}
+
+.container__sidebar {
+    width: 300px;
+    background-color: #3a3a3a;
+    color: white;
+    padding: 2rem;
+    min-height: 400px;
+}
+
+.container__heading {
+    font-size: 3.2rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.container__paragraph {
+    margin-bottom: 1.5rem;
+    font-size: 1.6rem;
+}
+
+/* 5. Cards Layout */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.card {
+    width: calc((100% - 2rem) / 3);
+    background-color: white;
+    border: 2px solid #000;
+}
+
+.card__header {
+    background-color: #3a3a3a;
+    color: white;
+    padding: 1rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.card__body {
+    padding: 1.5rem;
+    font-size: 1.4rem;
+}
+
+/* 6. Responsive Logic (Tablet & Mobile) */
+
+/* Tablet (≤ 768px) */
+@media (max-width: 768px) {
+    .header { padding: 1rem; }
+    .header__hamburger { display: block; }
+
+    /* Navigation Sidebar */
+    .nav {
+        position: fixed;
+        top: 0;
+        right: -300px;
+        width: 300px;
+        height: 100vh;
+        background: #3a3a3a;
+        z-index: 1000;
+        padding: 2rem;
+        transition: right 0.3s ease;
+        box-shadow: -2px 0 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .nav__list {
+        flex-direction: column;
+        gap: 0;
+        margin-top: 4rem;
+    }
+
+    .nav__link {
+        display: block;
+        padding: 1.5rem 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .nav__close-btn {
+        display: block;
+        text-align: right;
+        font-size: 2.8rem;
+        color: white;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    }
+
+    .nav__close-btn:hover {
+        transform: rotate(90deg);
+    }
+
+    /* Checkbox Logic */
+    .header__checkbox:checked ~ .header__nav {
+        right: 0;
+    }
+
+    .header__checkbox:checked ~ .overlay {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    /* Layout Content */
+    .container { padding: 1rem; }
+    .container__sidebar { width: 250px; }
+
+    /* Cards */
+    .card { width: calc((100% - 1rem) / 2); }
+}
+
+/* Mobile (≤ 480px) */
+@media (max-width: 480px) {
+    .container {
+        flex-direction: column;
+        max-width: 100%;
+    }
+
+    .container__sidebar {
+        width: 100%;
+        min-height: auto;
+    }
+
+    .container__heading { font-size: 2.4rem; }
+
+    .nav {
+        width: 280px;
+        right: -280px;
+    }
+
+    /* Cards 1 column */
+    .card { width: 100%; }
+}
